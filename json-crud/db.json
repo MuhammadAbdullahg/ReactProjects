@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "fghrtd",
+      "username": "fghsrt",
+      "email": "ffshry@gmail.com",
+      "age": 45,
+      "id": "uHvmMPhP33k"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
