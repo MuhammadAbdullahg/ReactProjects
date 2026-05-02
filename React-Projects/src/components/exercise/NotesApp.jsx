@@ -41,6 +41,16 @@ const NotesApp = () => {
     setNotes(filterDelNotes);
   };
 
+  const searchNote = (note) => {
+    if (filterNote) {
+      return note.title.toLowerCase().includes(filterNote.toLowerCase());
+    } else {
+      return note;
+    }
+  };
+
+  const filteredNotes = notes.filter((note) => searchNote(note));
+
   const handleEdit = (note) => {
     setTitle(note.title);
     setDescription(note.description);
@@ -107,7 +117,7 @@ const NotesApp = () => {
       <p>{error}</p>
       <ul>
         {notes.length > 0 &&
-          notes.map((note) => (
+          filteredNotes.map((note) => (
             <li key={note.id}>
               <h2>{note.title}</h2>
               <div
